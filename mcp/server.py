@@ -1,5 +1,11 @@
 from fastmcp import FastMCP
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+load_dotenv()
+HOST=os.environ.get("HOST")
+PATH=os.environ.get("PATH")
+
 import shutil
 from typing import List, Dict
 mcp=FastMCP()
@@ -110,4 +116,4 @@ async def movefiles(files:List[Dict]):
 
 
 if __name__=='__main__':
-    mcp.run(transport='http',host='localhost',path='/mcp')
+    mcp.run(transport='http',host=HOST,path=PATH)
