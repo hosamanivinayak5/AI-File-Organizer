@@ -1,0 +1,4 @@
+google-adk
+google-adk[extensions] 
+flask
+flask[async]
