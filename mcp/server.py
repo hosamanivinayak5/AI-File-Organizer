@@ -3,9 +3,9 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 load_dotenv()
-HOST=os.environ.get("HOST")
-PATH=os.environ.get("PATH")
-
+HOST=os.environ.get("MCP_HOST")
+PATH=os.environ.get("MCP_PATH")
+print(PATH)
 import shutil
 from typing import List, Dict
 mcp=FastMCP()
