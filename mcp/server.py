@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 HOST=os.environ.get("MCP_HOST")
 PATH=os.environ.get("MCP_PATH")
+PORT=int(os.environ.get("MCP_PORT"))
 print(PATH)
 import shutil
 from typing import List, Dict
@@ -116,4 +117,4 @@ async def movefiles(files:List[Dict]):
 
 
 if __name__=='__main__':
-    mcp.run(transport='http',host=HOST,path=PATH)
+    mcp.run(transport='http',host=HOST,path=PATH,port=PORT)
