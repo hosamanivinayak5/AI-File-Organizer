@@ -1,2 +1,2 @@
 fastmcp
-dotenv
+python-dotenv
